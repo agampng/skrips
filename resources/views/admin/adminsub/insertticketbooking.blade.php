@@ -29,7 +29,7 @@
                             @foreach($museum as $data)
                                 <option value="{{$data->id}}">{{$data->id}}</option>
                             @endforeach
-                        </select>
+                         </select>
                     </div>
                 </div>
                 @else
