@@ -24,6 +24,9 @@
             <div class="w-100"></div>
             <div class="col-1"></div>
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/newticket"> <b>tiket baru museum</b></a></div>
+            <div class="w-100"></div>
+            <div class="col-1"></div>
+            <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/new-admin"> <b>admin baru</b></a></div>
         </div>
 
     </div>
@@ -45,6 +48,9 @@
             <div class="col-1"></div>
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/updateticket"> <b>
                 memperbarui tiket</b></a></div>
+            <div class="w-100"></div>
+            <div class="col-1"></div>
+            <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/edit-admin"> <b>memperbarui admin</b></a></div>
         </div>
     </div>
     <div class="col mx-2" style="border:2px solid #3edbf0">
@@ -58,6 +64,9 @@
             <div class="w-100"></div>
             <div class="col-1"></div>
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/deleteticket"><b>hapus tiket</b></a></div>
+            <div class="w-100"></div>
+            <div class="col-1"></div>
+            <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/delete-admin"><b>hapus admin</b></a></div>
         </div>
     </div>
     <div class="col mx-2" style="border:2px solid #3edbf0">
