@@ -20,6 +20,7 @@
                     <input type="text" class="form-control" placeholder="nama perwakilan" name="nama" id="nama">
                 </div>
 
+                @if(auth()->user()->roles == "SUPERADMIN")
                 <div class="mt-2 ml-auto">
                     <div class="mb-2"><label for="museum">Pilih Museum</label></div>
                     <div class="mb-2">
@@ -28,9 +29,12 @@
                             @foreach($museum as $data)
                                 <option value="{{$data->id}}">{{$data->id}}</option>
                             @endforeach
-                          </select>
+                         </select>
                     </div>
                 </div>
+                @else
+                <input type="hidden" name="museum" value="{{auth()->user()->museum_id}}">
+                @endif
 
                 <div class="row">
                     <div class="mt-2 ml-auto col-10">

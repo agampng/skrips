@@ -64,6 +64,7 @@ Route::get('/admin/deletecollection','AdminControllers\AdminControllersSub\NewCo
 Route::get('/admin/deleteschedule','AdminControllers\AdminControllersSub\NewScheduleController@show');
 Route::get('/admin/deleteticket','AdminControllers\adminControllersSub\newTicketController@show');
 Route::get('/admin/delete-admin','AdminControllers\adminControllersSub\UserController@showDelete');
+Route::get('/admin/delete-booking','AdminControllers\AdminControllersSub\NewTicketBookingController@showDelete');
 
 //post untuk simpan data baru super admin
 Route::post('/admin/newmuseumupload','AdminControllers\AdminControllersSub\NewMuseumController@savemuseum');
@@ -86,6 +87,7 @@ Route::post('/admin/deletecollection','AdminControllers\AdminControllersSub\NewC
 Route::post('/admin/deleteschedule','AdminControllers\AdminControllersSub\NewScheduleController@destroy');
 Route::post('/admin/deleteticket','AdminControllers\adminControllersSub\newTicketController@destroy');
 Route::post('/admin/delete-admin','AdminControllers\adminControllersSub\UserController@destroy');
+Route::post('/admin/delete-booking','AdminControllers\adminControllersSub\NewTicketBookingController@destroy');
 
 
 
