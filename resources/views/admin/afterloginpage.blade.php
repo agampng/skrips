@@ -5,6 +5,7 @@
 
 
 <div class="row py-4 g-0 mx-4" style="height:800px">
+    @if(auth()->user()->roles == "SUPERADMIN")
     <div class="col mx-2" style="border:2px solid #3edbf0">
         <h4 class="text-center py-2" style="border-bottom:2px solid #3edbf0">Menu Buat</h4>
         <div class="row g-0 py-2">
@@ -24,11 +25,9 @@
             <div class="w-100"></div>
             <div class="col-1"></div>
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/newticket"> <b>tiket baru museum</b></a></div>
-            @if(auth()->user()->roles == "SUPERADMIN")
             <div class="w-100"></div>
             <div class="col-1"></div>
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/new-admin"> <b>admin baru</b></a></div>
-            @endif
         </div>
 
     </div>
@@ -50,11 +49,9 @@
             <div class="col-1"></div>
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/updateticket"> <b>
                 memperbarui tiket</b></a></div>
-            @if(auth()->user()->roles == "SUPERADMIN")
             <div class="w-100"></div>
             <div class="col-1"></div>
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/edit-admin"> <b>memperbarui admin</b></a></div>
-            @endif
         </div>
     </div>
     <div class="col mx-2" style="border:2px solid #3edbf0">
@@ -68,11 +65,9 @@
             <div class="w-100"></div>
             <div class="col-1"></div>
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/deleteticket"><b>hapus tiket</b></a></div>
-            @if(auth()->user()->roles == "SUPERADMIN")
             <div class="w-100"></div>
             <div class="col-1"></div>
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/delete-admin"><b>hapus admin</b></a></div>
-            @endif
         </div>
     </div>
     <div class="col mx-2" style="border:2px solid #3edbf0">
@@ -85,6 +80,21 @@
             <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/updatebooking"><b>Update Tiket</b></a></div>
         </div>
     </div>
+    @else
+    <div class="col-md-4 mx-2" style="border:2px solid #3edbf0">
+        <h4 class="text-center py-2" style="border-bottom:2px solid #3edbf0">Menu Admin</h4>
+        <div class="row g-0 py-2"  >
+            <div class="col-1"></div>
+            <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/newbooking"> <b>Buat Tiket</b></a></div>
+            <div class="w-100"></div>
+            <div class="col-1"></div>
+            <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/updatebooking"><b>Update Tiket</b></a></div>
+            <div class="w-100"></div>
+            <div class="col-1"></div>
+            <div class="col pt-1 pb-2"><a class="navbar-nav nav-link active" style="color:#f0ebcc;" href="/admin/delete-booking"><b>Hapus Tiket</b></a></div>
+        </div>
+    </div>
+    @endif
 </div>
 
 </div>
