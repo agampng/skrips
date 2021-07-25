@@ -48,6 +48,7 @@ Route::get('/admin/newcollection','AdminControllers\AdminControllersSub\NewColle
 Route::get('/admin/newschedule','AdminControllers\AdminControllersSub\NewScheduleController@index');
 Route::get('/admin/newticket','AdminControllers\AdminControllersSub\NewTicketController@index');
 Route::get('/admin/newbooking','AdminControllers\AdminControllersSub\NewTicketBookingController@index');
+Route::get('/admin/new-admin','AdminControllers\AdminControllersSub\UserController@create');
 
 //page untuk update data super admin
 Route::get('/admin/updatemuseum','AdminControllers\AdminControllersSub\NewMuseumController@edit');
@@ -56,11 +57,13 @@ Route::get('/admin/updatecollection','AdminControllers\AdminControllersSub\NewCo
 Route::get('/admin/updateschedule','AdminControllers\AdminControllersSub\NewScheduleController@edit');
 Route::get('/admin/updateticket','AdminControllers\adminControllersSub\NewTicketController@edit');
 Route::get('/admin/updatebooking','AdminControllers\AdminControllersSub\NewTicketBookingController@edit');
+Route::get('/admin/edit-admin','AdminControllers\AdminControllersSub\UserController@edit');
 
 //page untuk delete data super admin
 Route::get('/admin/deletecollection','AdminControllers\AdminControllersSub\NewCollectionController@show');
 Route::get('/admin/deleteschedule','AdminControllers\AdminControllersSub\NewScheduleController@show');
 Route::get('/admin/deleteticket','AdminControllers\adminControllersSub\newTicketController@show');
+Route::get('/admin/delete-admin','AdminControllers\adminControllersSub\UserController@showDelete');
 
 //post untuk simpan data baru super admin
 Route::post('/admin/newmuseumupload','AdminControllers\AdminControllersSub\NewMuseumController@savemuseum');
@@ -68,6 +71,7 @@ Route::post('/admin/neweventupload', 'AdminControllers\AdminControllersSub\NewEv
 Route::post('/admin/newcollectionupload', 'AdminControllers\AdminControllersSub\NewCollectionController@savecollection');
 Route::post('/admin/newscheduleupload','AdminControllers\AdminControllersSub\NewScheduleController@saveschedule');
 Route::post('/admin/newticketupload','AdminControllers\AdminControllersSub\NewTicketController@saveticket');
+Route::post('/admin/new-admin','AdminControllers\AdminControllersSub\UserController@store');
 
 //post untuk update data superadmin
 Route::post('/admin/updatemuseum','AdminControllers\AdminControllersSub\NewMuseumController@update');
@@ -75,11 +79,13 @@ Route::post('/admin/updateevent','AdminControllers\AdminControllersSub\NewEventC
 Route::post('/admin/updatecollection','AdminControllers\AdminControllersSub\NewCollectionController@update');
 Route::post('/admin/updateschedule','AdminControllers\AdminControllersSub\NewScheduleController@update');
 Route::post('/admin/updateticket','AdminControllers\AdminControllersSub\NewTicketController@update');
+Route::post('/admin/update-admin','AdminControllers\AdminControllersSub\UserController@update');
 
 //post untuk delete data super admin
 Route::post('/admin/deletecollection','AdminControllers\AdminControllersSub\NewCollectionController@destroy');
 Route::post('/admin/deleteschedule','AdminControllers\AdminControllersSub\NewScheduleController@destroy');
 Route::post('/admin/deleteticket','AdminControllers\adminControllersSub\newTicketController@destroy');
+Route::post('/admin/delete-admin','AdminControllers\adminControllersSub\UserController@destroy');
 
 
 
@@ -111,6 +117,7 @@ Route::get('/ajax-request/get-collection-by-museum', 'AdminControllers\AdminCont
 Route::get('/ajax-request/get-image-by-collection', 'AdminControllers\AdminControllersSub\NewCollectionController@getImage');
 Route::get('/ajax-request/get-schedule-by-museum', 'AdminControllers\AdminControllersSub\NewScheduleController@getSchedule');
 Route::get('/ajax-request/get-ticket-by-schedule', 'AdminControllers\AdminControllersSub\NewTicketController@getTicket');
+Route::post('/ajax-request/get-user', 'AdminControllers\AdminControllersSub\UserController@show');
 //email
 Route::post('/guest/send-email','emailController@index');
 
